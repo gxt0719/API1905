@@ -49,7 +49,7 @@ class Work1Controller extends Controller
 		return $old_str;
 	}
 
-
+    //加密
 	public function encode($string = '', $skey = 'cxphp')
    {
        $strArr   = str_split(base64_encode($string));
@@ -59,7 +59,7 @@ class Work1Controller extends Controller
        }
        return str_replace(array('=', '+', '/'), array('O0O0O', 'o000o', 'oo00o'), join('', $strArr));
    }
-
+   //解密
    public function decode($string = '', $skey = 'cxphp')
   {
       $strArr   = str_split(str_replace(array('O0O0O', 'o000o', 'oo00o'), array('=', '+', '/'), $string), 2);
