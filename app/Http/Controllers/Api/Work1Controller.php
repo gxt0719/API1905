@@ -60,7 +60,7 @@ class Work1Controller extends Controller
        return str_replace(array('=', '+', '/'), array('O0O0O', 'o000o', 'oo00o'), join('', $strArr));
    }
    //解密
-   public function decode($string = 'helloWord', $skey = 'cxphp')
+   public function decode($string = 'acGxVpshbpG9Xb3Jk', $skey = 'cxphp')
   {
       $strArr   = str_split(str_replace(array('O0O0O', 'o000o', 'oo00o'), array('=', '+', '/'), $string), 2);
       $strCount = count($strArr);
