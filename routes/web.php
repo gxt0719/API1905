@@ -47,3 +47,7 @@ Route::middleware(['checkUser'])->group(function(){
 	Route::any('/text/login','Api\TextController@login');
 	Route::any('/text/showData','Api\TextController@showData');
 });
+
+//对称加密
+Route::any('/user/encrypt3','User\IndexController@encrypt3');//加密
+Route::any('/user/encrypt3','User\IndexController@encrypt3');//解密
