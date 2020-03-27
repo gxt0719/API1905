@@ -51,3 +51,10 @@ Route::middleware(['checkUser'])->group(function(){
 //对称加密
 Route::any('encode','Api\Work1Controller@encode');//加密
 Route::any('decode','Api\Work1Controller@decode');//解密
+Route::any('wx','Api\LoginController@wx');
+Route::any('index','Api\LoginController@index');
+
+Route::any('/','Work\LoginController@login');//登录
+Route::any('login/loginDo','Work\LoginController@loginDo');//执行登录
+Route::any('login/register','Work\LoginController@register');//注册
+Route::any('login/registerDo','Work\LoginController@registerDo');//注册执行

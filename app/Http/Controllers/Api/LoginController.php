@@ -3,14 +3,32 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Login;
+use App\Model\Swiper;
 use Illuminate\Support\Facades\Redis;
 use DB;
 class LoginController extends Controller
 {
+    public function index(){
+        $data=Swiper::where('status',1)->get()->toArray();
+      // $model= new Swiper();
+      // echo $model->tojson($data);
+      echo json_encode($data);
+
+    }
+
 	public function test()
     {
     	echo 111;
         // echo '<pre>';print_r($_SERVER);echo '</pre>';http://gxt.wen5211314.com
+    }
+    public function wx(){
+          $con=$_GET['con'];
+ $arr=[
+        ['id'=>1,'text=>战狼'],
+        ['id'=>2,'text=>战狼2'],
+        ['id'=>3,'text=>战狼3']
+ ];
+ echo json_encode($arr,JSON_UNESCAPED_UNICODE);
     }
 	public function logon(Request $request){
 		echo '<pre>';print_r($request->input());echo '</pre>';
