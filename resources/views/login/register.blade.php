@@ -32,7 +32,11 @@
             <input name="user_pwd" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
             <hr class="hr15">
             <input value="注册" lay-submit lay-filter="login" style="width:100%;" type="submit">
+<<<<<<< HEAD
             <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{url('/')}}">去登陆</a></h3>
+=======
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{url('/login/login')}}">去登陆</a></h3>
+>>>>>>> aeabeb62ca79ab9619235973c21651962ebfc914
             <hr class="hr20" >
         </form>
     </div>

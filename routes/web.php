@@ -55,6 +55,7 @@ Route::any('wx','Api\LoginController@wx');
 Route::any('index','Api\LoginController@index');
 
 Route::any('/','Work\LoginController@login');//登录
+Route::any('login/login','Work\LoginController@login');//登录
 Route::any('login/loginDo','Work\LoginController@loginDo');//执行登录
 Route::any('login/register','Work\LoginController@register');//注册
 Route::any('login/registerDo','Work\LoginController@registerDo');//注册执行
